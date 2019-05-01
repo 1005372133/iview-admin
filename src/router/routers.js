@@ -433,6 +433,22 @@ export default [
     ]
   },
   {
+    path: '/index',
+    name: 'index',
+    component: Main,
+    children: [
+      {
+        path: 'contest',
+        name: 'contest',
+        meta: {
+          icon: 'md-funnel',
+          title: '首页'
+        },
+        component: () => import('@/view/index/page/contest.vue')
+      },
+    ]
+  },
+  {
     path: '/argu',
     name: 'argu',
     meta: {
